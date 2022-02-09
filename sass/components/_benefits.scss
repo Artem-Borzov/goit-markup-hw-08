@@ -1,0 +1,29 @@
+.benefits-list {
+	display: flex;
+	&__item {
+		width: 270px;
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+	&__icons {
+		padding: 25px 100px;
+		margin-bottom: 30px;
+		display: flex;
+		background-color: var(--background-color-our-work);
+		border-radius: 4px;
+		justify-content: center;
+		align-items: center;
+	}
+	&__title {
+		font-size: 14px;
+		line-height: 1.14;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	&__text {
+		color: var(--header-contacts-list-color);
+
+		line-height: 1.71;
+	}
+}

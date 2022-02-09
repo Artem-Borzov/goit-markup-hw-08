@@ -1,0 +1,65 @@
+.portfolio-card-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: calc(-1 * var(--card-set-gap));
+	margin-bottom: calc(-1 * var(--card-set-gap));
+	&__item {
+		flex-basis: calc(100% / 3 - var(--card-set-gap));
+		margin-right: var(--card-set-gap);
+		margin-bottom: var(--card-set-gap);
+
+		transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		&:hover,
+		&:focus {
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+				0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+		}
+	}
+	&__card-thumb {
+		position: relative;
+		overflow: hidden;
+	}
+	&__card-overlay {
+		position: absolute;
+		bottom: -100%;
+		left: 0;
+
+		padding: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		width: 370px;
+		height: 294px;
+
+		background-color: rgba(33, 150, 243, 0.9);
+
+		transform: translateY(0);
+		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		.portfolio-card-list__link:hover & {
+			transform: translateY(-100%);
+		}
+	}
+	&__card-overlay-text {
+		font-size: 18px;
+		line-height: calc(28 / 18);
+		color: var(--main-white-color);
+	}
+	&__content {
+		padding: 20px 24px;
+		border-bottom: var(--card-border) solid 1px;
+		border-left: var(--card-border) solid 1px;
+		border-right: var(--card-border) solid 1px;
+	}
+	&__title {
+		font-size: 18px;
+		line-height: 2;
+		letter-spacing: 0.06em;
+	}
+	&__text {
+		color: var(--header-contacts-list-color);
+
+		font-size: 16px;
+		line-height: 1.87;
+	}
+}
