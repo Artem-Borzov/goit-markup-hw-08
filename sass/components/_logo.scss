@@ -2,21 +2,29 @@
 	display: block;
 	font-family: Raleway;
 	font-weight: 700;
-	font-size: 26px;
-	line-height: 1.19;
+	font-size: 24px;
+	line-height: calc(28 / 24);
 	&__web {
 		&--header {
+			font-size: inherit;
+			line-height: inherit;
 			color: var(--main-accent-color);
 		}
 		&--footer {
+			font-size: inherit;
+			line-height: inherit;
 			color: var(--main-accent-color);
 		}
 	}
 	&__studio {
 		&--header {
+			font-size: inherit;
+			line-height: inherit;
 			color: var(--logo-black-color);
 		}
 		&--footer {
+			font-size: inherit;
+			line-height: inherit;
 			color: var(--main-white-color);
 		}
 	}
