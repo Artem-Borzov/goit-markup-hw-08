@@ -74,6 +74,9 @@ img {
 .button {
 	font-family: inherit;
 	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	outline: none;
 }
 .section-title {
 	margin-bottom: 50px;
