@@ -627,7 +627,7 @@ img {
   flex-wrap: wrap;
   margin-bottom: -10px;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 12px;
   line-height: calc(22 / 13);
   letter-spacing: 0.02em;
   color: var(--main-accent-color);
