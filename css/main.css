@@ -939,8 +939,14 @@ img {
 
 .clients-list__item {
   flex-basis: calc(100% / 2 - var(--card-set-gap));
-  margin-right: var(--card-set-gap);
   margin-bottom: var(--card-set-gap);
+  margin-right: var(--card-set-gap);
+}
+
+@media screen and (max-width: 767px) {
+  .clients-list__item:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {

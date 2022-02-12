@@ -14,8 +14,14 @@
 	margin-bottom: calc(-1 * var(--card-set-gap));
 	&__item {
 		flex-basis: calc(100% / 2 - var(--card-set-gap));
-		margin-right: var(--card-set-gap);
 		margin-bottom: var(--card-set-gap);
+		margin-right: var(--card-set-gap);
+		&:nth-child(2n) {
+			@media screen and (max-width: 767px) {
+				margin-right: 0;
+			}
+		}
+
 		@media screen and (min-width: 768px) {
 			flex-basis: calc(100% / 3 - var(--card-set-gap));
 		}
@@ -23,6 +29,7 @@
 			flex-basis: calc(100% / 6 - var(--card-set-gap));
 		}
 	}
+
 	&__card {
 		display: flex;
 		justify-content: center;
