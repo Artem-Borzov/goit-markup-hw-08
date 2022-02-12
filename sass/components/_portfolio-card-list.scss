@@ -1,20 +1,22 @@
 .portfolio-card-list {
 	display: flex;
 	flex-wrap: wrap;
+	@media screen and (min-width: 768px) {
+		margin-right: calc(-1 * var(--card-set-gap));
+	}
 
-	margin-right: calc(-1 * var(--card-set-gap));
 	margin-bottom: calc(-1 * var(--card-set-gap));
 	&__item {
-		display: flex;
-		flex-basis: calc(100% / 1 - var(--card-set-gap));
+		display: block;
+		margin-bottom: var(--card-set-gap);
 		@media screen and (min-width: 768px) {
+			display: flex;
 			flex-basis: calc(100% / 2 - var(--card-set-gap));
+			margin-right: var(--card-set-gap);
 		}
 		@media screen and (min-width: 1200px) {
 			flex-basis: calc(100% / 3 - var(--card-set-gap));
 		}
-		margin-right: var(--card-set-gap);
-		margin-bottom: var(--card-set-gap);
 
 		transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 		&:hover,
