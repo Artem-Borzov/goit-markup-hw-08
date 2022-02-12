@@ -615,8 +615,8 @@ img {
 }
 
 .mob-menu-footer-contacts__item:first-child {
-  font-size: 34px;
-  line-height: calc(40 / 34);
+  font-size: 32px;
+  line-height: calc(40 / 32);
   letter-spacing: 0.02em;
   color: var(--main-accent-color);
   margin-bottom: 32px;
@@ -627,8 +627,8 @@ img {
   flex-wrap: wrap;
   margin-bottom: -10px;
   font-weight: 500;
-  font-size: 18px;
-  line-height: calc(22 / 18);
+  font-size: 13px;
+  line-height: calc(22 / 13);
   letter-spacing: 0.02em;
   color: var(--main-accent-color);
 }
