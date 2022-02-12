@@ -10,7 +10,11 @@
 .clients-list {
 	display: flex;
 	flex-wrap: wrap;
-	margin-right: calc(-1 * var(--card-set-gap));
+	justify-content: center;
+	@media screen and (min-width: 768px) {
+		margin-right: calc(-1 * var(--card-set-gap));
+	}
+
 	margin-bottom: calc(-1 * var(--card-set-gap));
 	&__item {
 		flex-basis: calc(100% / 2 - var(--card-set-gap));

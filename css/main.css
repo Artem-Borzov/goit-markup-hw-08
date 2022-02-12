@@ -933,8 +933,14 @@ img {
 .clients-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-1 * var(--card-set-gap));
+  justify-content: center;
   margin-bottom: calc(-1 * var(--card-set-gap));
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list {
+    margin-right: calc(-1 * var(--card-set-gap));
+  }
 }
 
 .clients-list__item {
