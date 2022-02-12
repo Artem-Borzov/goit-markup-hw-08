@@ -19,10 +19,16 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="./css/main.min.css" />
+		<link
+			type="image/x-icon"
+			href="./images/favicon.ico"
+			rel="shortcut icon"
+		/>
+		<link type="Image/x-icon" href="./images/favicon.ico" rel="icon" />
 	</head>
 	<body>
 		<header class="header">
-			<div class="container">
+			<div class="container header__container">
 				<div class="header-body">
 					<a class="link logo header-nav__logo" href="./index.html"
 						><span class="logo__web logo__web--header">Web</span
@@ -87,6 +93,65 @@
 								</svg>
 								+38 096 111 11 11</a
 							>
+						</li>
+					</ul>
+				</div>
+				<button
+					class="button mob-menu-open js-open-menu"
+					aria-expanded="false"
+					aria-controls="mob-menu"
+					type="button"
+				>
+					<svg height="40" width="40">
+						<use href="./images/icons.svg#menu_40px"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="mob-menu js-menu-container" id="mob-menu">
+				<button
+					class="button mob-menu-close js-close-menu"
+					type="button"
+				>
+					<svg width="40" height="40">
+						<use href="./images/icons.svg#close_40px"></use>
+					</svg>
+				</button>
+				<ul class="list mob-menu-header-list">
+					<li class="mob-menu-header-list__item">
+						<a class="link current" href="./index.html">Студия</a>
+					</li>
+					<li class="mob-menu-header-list__item">
+						<a class="link" href="./portfolio.html">Портфолио</a>
+					</li>
+					<li class="mob-menu-header-list__item">
+						<a class="link" href="">Контакты</a>
+					</li>
+				</ul>
+				<div class="mob-menu-footer">
+					<ul class="list mob-menu-footer-contacts">
+						<li class="mob-menu-footer-contacts__item">
+							<a class="link" href="tel:+380961111111"
+								>+38 096 111 11 11</a
+							>
+						</li>
+						<li class="mob-menu-footer-contacts__item">
+							<a class="link" href="mailto:info@devstudio.com"
+								>info@devstudio.com</a
+							>
+						</li>
+					</ul>
+					<ul class="list mob-menu-footer-socials">
+						<li class="mob-menu-footer-socials__item">
+							<a class="link" href="">Instagram</a>
+						</li>
+						<li class="mob-menu-footer-socials__item">
+							<a class="link" href="">Twitter</a>
+						</li>
+						<li class="mob-menu-footer-socials__item">
+							<a class="link" href="">Facebook</a>
+						</li>
+						<li class="mob-menu-footer-socials__item">
+							<a class="link" href="">LinkedIn</a>
 						</li>
 					</ul>
 				</div>
@@ -186,13 +251,22 @@
 					<ul class="list our-work-list">
 						<li class="our-work-list__item">
 							<div class="our-work-list__thumb">
-								<img
-									class="our-work-list__img"
-									src="./images/working-1.jpg"
-									alt="Рабочее место 1"
-									width="370"
-									height="294"
-								/>
+								<picture>
+									<source
+										srcset="
+											./images/index/our-work-1-desk@1x-min.jpg 1x,
+											./images/index/our-work-1-desk@2x-min.jpg 2x
+										"
+										media="(min-width:1200px)"
+									/>
+
+									<img
+										class="our-work-list__img"
+										src="./images/index/our-work-1-desk@1x-min.jpg"
+										alt="Рабочее место 1"
+									/>
+								</picture>
+
 								<p class="our-work-list__thumb-text">
 									Десктопные приложения
 								</p>
@@ -201,13 +275,21 @@
 
 						<li class="our-work-list__item">
 							<div class="our-work-list__thumb">
-								<img
-									class="our-work-list__img"
-									src="./images/working-2.jpg"
-									alt="Рабочее место 2"
-									width="370"
-									height="294"
-								/>
+								<picture>
+									<source
+										srcset="
+											./images/index/our-work-2-desk@1x-min.jpg 1x,
+											./images/index/our-work-2-desk@2x-min.jpg 2x
+										"
+										media="(min-width:1200px)"
+									/>
+
+									<img
+										class="our-work-list__img"
+										src="./images/index/our-work-2-desk@1x-min.jpg"
+										alt="Рабочее место 1"
+									/>
+								</picture>
 								<p class="our-work-list__thumb-text">
 									Мобильные приложения
 								</p>
@@ -216,13 +298,21 @@
 
 						<li class="our-work-list__item">
 							<div class="our-work-list__thumb">
-								<img
-									class="our-work-list__img"
-									src="./images/working-3.jpg"
-									alt="Рабочее место 3"
-									width="370"
-									height="294"
-								/>
+								<picture>
+									<source
+										srcset="
+											./images/index/our-work-3-desk@1x-min.jpg 1x,
+											./images/index/our-work-3-desk@2x-min.jpg 2x
+										"
+										media="(min-width:1200px)"
+									/>
+
+									<img
+										class="our-work-list__img"
+										src="./images/index/our-work-3-desk@1x-min.jpg"
+										alt="Рабочее место 1"
+									/>
+								</picture>
 								<p class="our-work-list__thumb-text">
 									Дизайнерские решения
 								</p>
@@ -237,11 +327,34 @@
 					<h2 class="our-team__title section-title">Наша команда</h2>
 					<ul class="list our-team-list">
 						<li class="our-team-list__card">
-							<img
-								class="our-team-list__img"
-								src="./images/igor-dem.jpg"
-								alt="Игорь Демьянненко"
-							/>
+							<picture>
+								<source
+									srcset="
+										./images/index/our-team-1-desk@1x-min.jpg 1x,
+										./images/index/our-team-1-desk@2x-min.jpg 2x
+									"
+									media="(min-width:1200px)"
+								/>
+								<source
+									srcset="
+										./images/index/our-team-1-tab@1x-min.jpg 1x,
+										./images/index/our-team-1-tab@2x-min.jpg 2x
+									"
+									media="(min-width:768px)"
+								/>
+								<source
+									srcset="
+										./images/index/our-team-1-mob@1x-min.jpg 1x,
+										./images/index/our-team-1-mob@2x-min.jpg 2x
+									"
+								/>
+
+								<img
+									src="./images/index/our-team-1-desk@1x-min.jpg 1x"
+									alt="Игорь Демьяненко"
+								/>
+							</picture>
+
 							<div class="our-team-list__content">
 								<h3 class="our-team-list__title">
 									Игорь Демьяненко
@@ -308,13 +421,33 @@
 							</div>
 						</li>
 						<li class="our-team-list__card">
-							<img
-								class="our-team-list__img"
-								src="./images/olga-rep.jpg"
-								alt="Ольга Репина"
-								width="270"
-								height="260"
-							/>
+							<picture>
+								<source
+									srcset="
+										./images/index/our-team-2-desk@1x-min.jpg 1x,
+										./images/index/our-team-2-desk@2x-min.jpg 2x
+									"
+									media="(min-width:1200px)"
+								/>
+								<source
+									srcset="
+										./images/index/our-team-2-tab@1x-min.jpg 1x,
+										./images/index/our-team-2-tab@2x-min.jpg 2x
+									"
+									media="(min-width:768px)"
+								/>
+								<source
+									srcset="
+										./images/index/our-team-2-mob@1x-min.jpg 1x,
+										./images/index/our-team-2-mob@2x-min.jpg 2x
+									"
+								/>
+
+								<img
+									src="./images/index/our-team-2-desk@1x-min.jpg 1x"
+									alt="Ольга Репина"
+								/>
+							</picture>
 							<div class="our-team-list__content">
 								<h3 class="our-team-list__title">
 									Ольга Репина
@@ -381,13 +514,33 @@
 							</div>
 						</li>
 						<li class="our-team-list__card">
-							<img
-								class="our-team-list__img"
-								src="./images/nik-tar.jpg"
-								alt="Николай Тарасов"
-								width="270"
-								height="260"
-							/>
+							<picture>
+								<source
+									srcset="
+										./images/index/our-team-3-desk@1x-min.jpg 1x,
+										./images/index/our-team-3-desk@2x-min.jpg 2x
+									"
+									media="(min-width:1200px)"
+								/>
+								<source
+									srcset="
+										./images/index/our-team-3-tab@1x-min.jpg 1x,
+										./images/index/our-team-3-tab@2x-min.jpg 2x
+									"
+									media="(min-width:768px)"
+								/>
+								<source
+									srcset="
+										./images/index/our-team-3-mob@1x-min.jpg 1x,
+										./images/index/our-team-3-mob@2x-min.jpg 2x
+									"
+								/>
+
+								<img
+									src="./images/index/our-team-3-desk@1x-min.jpg 1x"
+									alt="Николай Тарасов"
+								/>
+							</picture>
 							<div class="our-team-list__content">
 								<h3 class="our-team-list__title">
 									Николай Тарасов
@@ -452,13 +605,33 @@
 							</div>
 						</li>
 						<li class="our-team-list__card">
-							<img
-								class="our-team-list__img"
-								src="./images/mix-erm.jpg"
-								alt="Михаил Ермаков"
-								width="270"
-								height="260"
-							/>
+							<picture>
+								<source
+									srcset="
+										./images/index/our-team-4-desk@1x-min.jpg 1x,
+										./images/index/our-team-4-desk@2x-min.jpg 2x
+									"
+									media="(min-width:1200px)"
+								/>
+								<source
+									srcset="
+										./images/index/our-team-4-tab@1x-min.jpg 1x,
+										./images/index/our-team-4-tab@2x-min.jpg 2x
+									"
+									media="(min-width:768px)"
+								/>
+								<source
+									srcset="
+										./images/index/our-team-4-mob@1x-min.jpg 1x,
+										./images/index/our-team-4-mob@2x-min.jpg 2x
+									"
+								/>
+
+								<img
+									src="./images/index/our-team-1-desk@1x-min.jpg 1x"
+									alt="Михаил Ермаков"
+								/>
+							</picture>
 							<div class="our-team-list__content">
 								<h3 class="our-team-list__title">
 									Михаил Ермаков
@@ -848,6 +1021,13 @@
 				</form>
 			</div>
 		</div>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
+		<script defer src="js/mobile-menu.js"></script>
 		<script src="./js/modal.js"></script>
 	</body>
 </html>

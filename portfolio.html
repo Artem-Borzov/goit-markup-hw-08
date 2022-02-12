@@ -19,11 +19,17 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="./css/main.min.css" />
+		<link
+			type="image/x-icon"
+			href="./images/favicon.ico"
+			rel="shortcut icon"
+		/>
+		<link type="Image/x-icon" href="./images/favicon.ico" rel="icon" />
 	</head>
 	<body>
 		<!-- Шапка -->
 		<header class="header">
-			<div class="container">
+			<div class="container header__container">
 				<div class="header-body">
 					<a class="link logo header-nav__logo" href="./index.html"
 						><span class="logo__web logo__web--header">Web</span
@@ -91,6 +97,67 @@
 						</li>
 					</ul>
 				</div>
+				<button
+					class="button mob-menu-open js-open-menu"
+					aria-expanded="false"
+					aria-controls="mob-menu"
+					type="button"
+				>
+					<svg height="40" width="40">
+						<use href="./images/icons.svg#menu_40px"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="mob-menu js-menu-container" id="mob-menu">
+				<button
+					class="button mob-menu-close js-close-menu"
+					type="button"
+				>
+					<svg width="40" height="40">
+						<use href="./images/icons.svg#close_40px"></use>
+					</svg>
+				</button>
+				<ul class="list mob-menu-header-list">
+					<li class="mob-menu-header-list__item">
+						<a class="link" href="./index.html">Студия</a>
+					</li>
+					<li class="mob-menu-header-list__item">
+						<a class="link current" href="./portfolio.html"
+							>Портфолио</a
+						>
+					</li>
+					<li class="mob-menu-header-list__item">
+						<a class="link" href="">Контакты</a>
+					</li>
+				</ul>
+				<div class="mob-menu-footer">
+					<ul class="list mob-menu-footer-contacts">
+						<li class="mob-menu-footer-contacts__item">
+							<a class="link" href="tel:+380961111111"
+								>+38 096 111 11 11</a
+							>
+						</li>
+						<li class="mob-menu-footer-contacts__item">
+							<a class="link" href="mailto:info@devstudio.com"
+								>info@devstudio.com</a
+							>
+						</li>
+					</ul>
+					<ul class="list mob-menu-footer-socials">
+						<li class="mob-menu-footer-socials__item">
+							<a class="link" href="">Instagram</a>
+						</li>
+						<li class="mob-menu-footer-socials__item">
+							<a class="link" href="">Twitter</a>
+						</li>
+						<li class="mob-menu-footer-socials__item">
+							<a class="link" href="">Facebook</a>
+						</li>
+						<li class="mob-menu-footer-socials__item">
+							<a class="link" href="">LinkedIn</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</header>
 		<!-- Основа -->
@@ -144,13 +211,33 @@
 						<li class="portfolio-card-list__item">
 							<a class="portfolio-card-list__link link" href="">
 								<div class="portfolio-card-list__card-thumb">
-									<img
-										class="portfolio-card-list-img"
-										src="./images/portfolio/portfolio-1.jpg"
-										alt="Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/portfolio/portfolio-1-desk@1x.jpg 1x,
+												./images/portfolio/portfolio-1-desk@2x.jpg 2x
+											"
+											media="(min-width:1200px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-1-tab@1x.jpg 1x,
+												./images/portfolio/portfolio-1-tab@2x.jpg 2x
+											"
+											media="(min-width:768px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-1-mob@1x.jpg 1x,
+												./images/portfolio/portfolio-1-mob@2x.jpg 2x
+											"
+										/>
+
+										<img
+											src="./images/portfolio/portfolio-1-desk@1x.jpg"
+											alt="Технокряк"
+										/>
+									</picture>
 									<div
 										class="portfolio-card-list__card-overlay"
 									>
@@ -177,13 +264,33 @@
 						<li class="portfolio-card-list__item">
 							<a class="portfolio-card-list__link link" href="">
 								<div class="portfolio-card-list__card-thumb">
-									<img
-										class="portfolio-card-list-img"
-										src="./images/portfolio/portfolio-2.jpg"
-										alt="Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/portfolio/portfolio-2-desk@1x.jpg 1x,
+												./images/portfolio/portfolio-2-desk@2x.jpg 2x
+											"
+											media="(min-width:1200px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-2-tab@1x.jpg 1x,
+												./images/portfolio/portfolio-2-tab@2x.jpg 2x
+											"
+											media="(min-width:768px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-2-mob@1x.jpg 1x,
+												./images/portfolio/portfolio-2-mob@2x.jpg 2x
+											"
+										/>
+
+										<img
+											src="./images/portfolio/portfolio-2-desk@1x.jpg"
+											alt="Постер"
+										/>
+									</picture>
 									<div
 										class="portfolio-card-list__card-overlay"
 									>
@@ -209,13 +316,33 @@
 						<li class="portfolio-card-list__item">
 							<a class="portfolio-card-list__link link" href="">
 								<div class="portfolio-card-list__card-thumb">
-									<img
-										class="portfolio-card-list-img"
-										src="./images/portfolio/portfolio-3.jpg"
-										alt="Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/portfolio/portfolio-3-desk@1x.jpg 1x,
+												./images/portfolio/portfolio-3-desk@2x.jpg 2x
+											"
+											media="(min-width:1200px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-3-tab@1x.jpg 1x,
+												./images/portfolio/portfolio-3-tab@2x.jpg 2x
+											"
+											media="(min-width:768px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-3-mob@1x.jpg 1x,
+												./images/portfolio/portfolio-3-mob@2x.jpg 2x
+											"
+										/>
+
+										<img
+											src="./images/portfolio/portfolio-3-desk@1x.jpg"
+											alt="Ресторан"
+										/>
+									</picture>
 									<div
 										class="portfolio-card-list__card-overlay"
 									>
@@ -241,13 +368,33 @@
 						<li class="portfolio-card-list__item">
 							<a class="portfolio-card-list__link link" href="">
 								<div class="portfolio-card-list__card-thumb">
-									<img
-										class="portfolio-card-list-img"
-										src="./images/portfolio/portfolio-4.jpg"
-										alt="Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/portfolio/portfolio-4-desk@1x.jpg 1x,
+												./images/portfolio/portfolio-4-desk@2x.jpg 2x
+											"
+											media="(min-width:1200px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-4-tab@1x.jpg 1x,
+												./images/portfolio/portfolio-4-tab@2x.jpg 2x
+											"
+											media="(min-width:768px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-4-mob@1x.jpg 1x,
+												./images/portfolio/portfolio-4-mob@2x.jpg 2x
+											"
+										/>
+
+										<img
+											src="./images/portfolio/portfolio-4-desk@1x.jpg"
+											alt="Прайм"
+										/>
+									</picture>
 									<div
 										class="portfolio-card-list__card-overlay"
 									>
@@ -273,13 +420,33 @@
 						<li class="portfolio-card-list__item">
 							<a class="portfolio-card-list__link link" href="">
 								<div class="portfolio-card-list__card-thumb">
-									<img
-										class="portfolio-card-list-img"
-										src="./images/portfolio/portfolio-5.jpg"
-										alt="Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/portfolio/portfolio-5-desk@1x.jpg 1x,
+												./images/portfolio/portfolio-5-desk@2x.jpg 2x
+											"
+											media="(min-width:1200px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-5-tab@1x.jpg 1x,
+												./images/portfolio/portfolio-5-tab@2x.jpg 2x
+											"
+											media="(min-width:768px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-5-mob@1x.jpg 1x,
+												./images/portfolio/portfolio-5-mob@2x.jpg 2x
+											"
+										/>
+
+										<img
+											src="./images/portfolio/portfolio-5-desk@1x.jpg"
+											alt="Боксы"
+										/>
+									</picture>
 									<div
 										class="portfolio-card-list__card-overlay"
 									>
@@ -305,13 +472,33 @@
 						<li class="portfolio-card-list__item">
 							<a class="portfolio-card-list__link link" href="">
 								<div class="portfolio-card-list__card-thumb">
-									<img
-										class="portfolio-card-list-img"
-										src="./images/portfolio/portfolio-6.jpg"
-										alt="Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/portfolio/portfolio-6-desk@1x.jpg 1x,
+												./images/portfolio/portfolio-6-desk@2x.jpg 2x
+											"
+											media="(min-width:1200px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-6-tab@1x.jpg 1x,
+												./images/portfolio/portfolio-6-tab@2x.jpg 2x
+											"
+											media="(min-width:768px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-6-mob@1x.jpg 1x,
+												./images/portfolio/portfolio-6-mob@2x.jpg 2x
+											"
+										/>
+
+										<img
+											src="./images/portfolio/portfolio-6-desk@1x.jpg"
+											alt="Веб-сайт"
+										/>
+									</picture>
 									<div
 										class="portfolio-card-list__card-overlay"
 									>
@@ -337,13 +524,33 @@
 						<li class="portfolio-card-list__item">
 							<a class="portfolio-card-list__link link" href="">
 								<div class="portfolio-card-list__card-thumb">
-									<img
-										class="portfolio-card-list-img"
-										src="./images/portfolio/portfolio-7.jpg"
-										alt="Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/portfolio/portfolio-7-desk@1x.jpg 1x,
+												./images/portfolio/portfolio-7-desk@2x.jpg 2x
+											"
+											media="(min-width:1200px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-7-tab@1x.jpg 1x,
+												./images/portfolio/portfolio-7-tab@2x.jpg 2x
+											"
+											media="(min-width:768px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-7-mob@1x.jpg 1x,
+												./images/portfolio/portfolio-7-mob@2x.jpg 2x
+											"
+										/>
+
+										<img
+											src="./images/portfolio/portfolio-7-desk@1x.jpg"
+											alt="Издание"
+										/>
+									</picture>
 									<div
 										class="portfolio-card-list__card-overlay"
 									>
@@ -369,13 +576,33 @@
 						<li class="portfolio-card-list__item">
 							<a class="portfolio-card-list__link link" href="">
 								<div class="portfolio-card-list__card-thumb">
-									<img
-										class="portfolio-card-list-img"
-										src="./images/portfolio/portfolio-8.jpg"
-										alt="Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/portfolio/portfolio-8-desk@1x.jpg 1x,
+												./images/portfolio/portfolio-8-desk@2x.jpg 2x
+											"
+											media="(min-width:1200px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-8-tab@1x.jpg 1x,
+												./images/portfolio/portfolio-8-tab@2x.jpg 2x
+											"
+											media="(min-width:768px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-8-mob@1x.jpg 1x,
+												./images/portfolio/portfolio-8-mob@2x.jpg 2x
+											"
+										/>
+
+										<img
+											src="./images/portfolio/portfolio-8-desk@1x.jpg"
+											alt="ЛАБ"
+										/>
+									</picture>
 									<div
 										class="portfolio-card-list__card-overlay"
 									>
@@ -401,13 +628,33 @@
 						<li class="portfolio-card-list__item">
 							<a class="portfolio-card-list__link link" href="">
 								<div class="portfolio-card-list__card-thumb">
-									<img
-										class="portfolio-card-list-img"
-										src="./images/portfolio/portfolio-9.jpg"
-										alt="Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/portfolio/portfolio-9-desk@1x.jpg 1x,
+												./images/portfolio/portfolio-9-desk@2x.jpg 2x
+											"
+											media="(min-width:1200px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-9-tab@1x.jpg 1x,
+												./images/portfolio/portfolio-9-tab@2x.jpg 2x
+											"
+											media="(min-width:768px)"
+										/>
+										<source
+											srcset="
+												./images/portfolio/portfolio-9-mob@1x.jpg 1x,
+												./images/portfolio/portfolio-9-mob@2x.jpg 2x
+											"
+										/>
+
+										<img
+											src="./images/portfolio/portfolio-9-desk@1x.jpg"
+											alt="Технокряк"
+										/>
+									</picture>
 									<div
 										class="portfolio-card-list__card-overlay"
 									>
@@ -564,5 +811,12 @@
 				</form>
 			</div>
 		</footer>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
+		<script defer src="js/mobile-menu.js"></script>
 	</body>
 </html>

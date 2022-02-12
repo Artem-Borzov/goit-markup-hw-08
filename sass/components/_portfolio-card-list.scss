@@ -1,10 +1,18 @@
 .portfolio-card-list {
 	display: flex;
 	flex-wrap: wrap;
+
 	margin-right: calc(-1 * var(--card-set-gap));
 	margin-bottom: calc(-1 * var(--card-set-gap));
 	&__item {
-		flex-basis: calc(100% / 3 - var(--card-set-gap));
+		display: flex;
+		flex-basis: calc(100% / 1 - var(--card-set-gap));
+		@media screen and (min-width: 768px) {
+			flex-basis: calc(100% / 2 - var(--card-set-gap));
+		}
+		@media screen and (min-width: 1200px) {
+			flex-basis: calc(100% / 3 - var(--card-set-gap));
+		}
 		margin-right: var(--card-set-gap);
 		margin-bottom: var(--card-set-gap);
 
@@ -14,6 +22,10 @@
 			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 				0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 		}
+	}
+	&__link {
+		display: flex;
+		flex-direction: column;
 	}
 	&__card-thumb {
 		position: relative;
@@ -29,8 +41,8 @@
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
-		width: 370px;
-		height: 294px;
+		width: 100%;
+		height: 100%;
 
 		background-color: rgba(33, 150, 243, 0.9);
 
@@ -46,6 +58,7 @@
 		color: var(--main-white-color);
 	}
 	&__content {
+		flex-grow: 1;
 		padding: 20px 24px;
 		border-bottom: var(--card-border) solid 1px;
 		border-left: var(--card-border) solid 1px;
